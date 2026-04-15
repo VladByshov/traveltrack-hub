@@ -6,7 +6,7 @@ import Button from "@/components/Button/Button";
 export default function Home() {
   return (
       <section className={css.hero}>
-        <div className={css.wrapperTitle}>
+        <div className={css.wrapperTitleDescr}>
           <h1 className={css.mainTitle}>
           Campers of your dreams
         </h1>

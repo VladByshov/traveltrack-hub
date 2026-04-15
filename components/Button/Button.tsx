@@ -10,7 +10,6 @@ interface ButtonProps {
 export default function Button({
                                    text,
                                    onClick,
-                                   className,
                                }: ButtonProps) {
     return (
         <button className={css.primary} onClick={onClick}>
