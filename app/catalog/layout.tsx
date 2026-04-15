@@ -11,7 +11,7 @@ export default function CatalogLayout({
     sidebar: React.ReactNode;
 }>) {
     return (
-        <div className="container">
+        <div className={css.container}>
             <aside className={css.aside}>{sidebar}</aside>
             <div className={css.mainContent}>{children}</div>
         </div>
