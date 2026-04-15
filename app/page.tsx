@@ -13,7 +13,9 @@ export default function Home() {
         <p className={css.mainDescr}>
           You can find everything you want in our catalog
         </p>
-            <Button text={"View Now"}/>
+            <Link href={"./catalog"}>
+                <Button text={"View Now"} color={"green"}/>
+            </Link>
         </div>
       </section>
   );

@@ -1,9 +1,11 @@
 .header {
     position: relative;
     display: flex;
-    justify-content: space-between;
+    /*justify-content: space-between;*/
     align-items: center;
     background: var(--background-clr-blocks);
+
+    gap: 450px;
 }
 
 .logo {
@@ -11,9 +13,7 @@
     padding: 26px 0;
 }
 .navigation {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+   margin-right: 500px;
 }
 
 .listNavigation {
@@ -30,7 +30,6 @@
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.link:hover,
-.link:focus{
+.link:hover{
     color: var(--btn-primary);
 }

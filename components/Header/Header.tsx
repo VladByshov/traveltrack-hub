@@ -7,7 +7,7 @@ export default function Header() {
         <header className={css.header}>
             <Link
                 className={css.logo} href={"/"}>
-                <Image className={css.logoMobile} src="/logo.svg" alt="Logo" width={136} height={16}/>
+                <Image className={css.logoMobile} src="/svg/logo.svg" alt="Logo" width={136} height={16}/>
             </Link>
             <nav className={css.navigation}>
                 <ul className={css.listNavigation}>

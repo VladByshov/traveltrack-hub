@@ -47,6 +47,7 @@ export interface CampersResponse {
 }
 
 export interface CamperFilters {
+    location?: string;
     form?: CarForm;
     engine?: CarEngine;
     transmission?: CarTransmission;
