@@ -1,4 +1,4 @@
-export interface Car {
+export interface Camper {
     id: string;
     name: string;
     price: number;
@@ -26,9 +26,9 @@ export interface Car {
     reviews: CarReview[];
 }
 
-export type CarForm = "alcove | panel_van | integrated | semi_integrated";
-export type CarTransmission = "automatic | manual";
-export type CarEngine = "diesel | petrol | hybrid | electric";
+export type CarForm = "alcove" | "panel_van" | "integrated" | "semi_integrated";
+export type CarTransmission = "automatic" | "manual";
+export type CarEngine = "diesel" | "petrol" | "hybrid" | "electric";
 
 export interface CarGallery {
     thumb: string;
@@ -39,4 +39,15 @@ export interface CarReview {
     reviewer_name: string,
     reviewer_rating: number,
     comment: string,
+}
+
+export interface CampersResponse {
+    items: Camper[];
+    total: number;
+}
+
+export interface CamperFilters {
+    form?: CarForm;
+    engine?: CarEngine;
+    transmission?: CarTransmission;
 }
