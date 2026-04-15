@@ -1,0 +1,21 @@
+.primary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    outline: transparent;
+    border-color: transparent;
+
+    border-radius: 200px;
+    padding: 16px 43.5px;
+    width: 173px;
+    height: 56px;
+
+    background: var(--btn-primary);
+    color: var(--color-bg-main);
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: -0.01em;
+}

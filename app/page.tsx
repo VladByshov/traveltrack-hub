@@ -1,5 +1,6 @@
 import css from "./Home.module.css"
 import Link from "next/link";
+import Button from "@/components/Button/Button";
 
 
 export default function Home() {
@@ -12,9 +13,7 @@ export default function Home() {
         <p className={css.mainDescr}>
           You can find everything you want in our catalog
         </p>
-            <Link href={}>
-
-            </Link>
+            <Button text={"View Now"}/>
         </div>
       </section>
   );
