@@ -1,5 +1,6 @@
-import css from "styled-jsx/css";
+import css from "./Catalog.module.css";
 import React from "react";
+import "modern-normalize"
 
 
 export default function CatalogLayout({
@@ -10,9 +11,9 @@ export default function CatalogLayout({
     sidebar: React.ReactNode;
 }>) {
     return (
-        <div className={css.container}>
-            <aside className={css.sidebar}>{sidebar}</aside>
-            <div className={css.notesWrapper}>{children}</div>
+        <div className="container">
+            <aside className={css.aside}>{sidebar}</aside>
+            <div className={css.mainContent}>{children}</div>
         </div>
     );
 }

@@ -3,26 +3,38 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
-    outline: transparent;
-    border-color: transparent;
     cursor: pointer;
+    outline: transparent;
 
     border-radius: 200px;
     padding: 16px 43.5px;
     width: 173px;
     height: 56px;
 
-    background: var(--btn-primary);
-    color: var(--color-bg-main);
-
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: -0.01em;
-
-    transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.primary:hover {
+
+.green {
+    background: var(--btn-primary);
+    color: var(--color-bg-main);
+    transition: background 350ms cubic-bezier(0.4, 0, 0.2, 1);
+    border-color: transparent;
+}
+.green:hover {
     background:var(--btn-hover);
+}
+
+.white {
+    background: var(--color-bg-main);
+    border: 1px solid var(--gray-light);
+    transition: border 350ms cubic-bezier(0.4, 0, 0.2, 1);
+    color: var(--primary-text-color);
+}
+
+.white:hover {
+    border:  1px solid var(--btn-hover);
 }
