@@ -42,13 +42,19 @@ export interface CarReview {
 }
 
 export interface CampersResponse {
-    items: Camper[];
+    campers: Camper[];
     total: number;
+    totalPages:number;
 }
 
 export interface CamperFilters {
-    location?: string;
-    form?: CarForm;
-    engine?: CarEngine;
-    transmission?: CarTransmission;
+    location: string;
+    form: CarForm;
+    engine: CarEngine;
+    transmission: CarTransmission;
+}
+
+export interface CampersParams extends Partial<CamperFilters>{
+    page: number;
+    perPage: number;
 }

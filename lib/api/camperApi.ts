@@ -1,5 +1,5 @@
-import {Camper, CamperFilters, CampersResponse, CarReview} from "@/types/camper";
-import {nextServer} from "@/lib/api";
+import {Camper, CampersParams, CampersResponse, CarReview} from "@/types/camper";
+import {nextServer} from "@/lib/api/api";
 
 
 export interface BookingPayload{
@@ -7,9 +7,9 @@ export interface BookingPayload{
     email: string;
 }
 
-export const getAllCampers = async (filters: CamperFilters = {}): Promise<CampersResponse> => {
+export const getAllCampers = async (params: CampersParams = {page:1 , perPage:4}): Promise<CampersResponse> => {
     const { data } = await nextServer.get<CampersResponse>('/campers', {
-        params: filters,
+        params
     });
     return data;
 };
