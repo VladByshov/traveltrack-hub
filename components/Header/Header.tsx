@@ -1,8 +1,15 @@
+"use client"
+
 import css from "./Header.module.css"
 import Image from "next/image";
 import Link from "next/link";
+import HeaderNavItem from "@/components/Header/HeaderNavItem/HeaderNavItem";
+import {PathConstant} from "@/lib/constans/path.constant";
+import {usePathname} from "next/navigation";
 
 export default function Header() {
+    const pathname = usePathname();
+
     return (
         <header className={css.header}>
             <Link
@@ -11,12 +18,8 @@ export default function Header() {
             </Link>
             <nav className={css.navigation}>
                 <ul className={css.listNavigation}>
-                    <li className={css.listNavigationItem}>
-                        <Link className={css.link} href={"/"}>Home</Link>
-                    </li>
-                    <li className={css.listNavigationItem}>
-                        <Link className={css.link} href={"/catalog"}>Catalog</Link>
-                    </li>
+                    <HeaderNavItem link={PathConstant.Home} text={"Home"}/>
+                    <HeaderNavItem isActive={pathname === PathConstant.Catalog} link={PathConstant.Catalog} text={"Catalog"}/>
                 </ul>
             </nav>
         </header>
