@@ -3,6 +3,9 @@ import {Inter} from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header/Header";
 import "modern-normalize";
+import TanStackProvider from "@/components/TanStackProvider/TanStackProvider";
+import {Suspense} from "react";
+import PageLoader from "@/components/PageLoader/PageLoader";
 
 const inter = Inter({
     variable: "--font-geist-inter",
@@ -24,10 +27,14 @@ export default function RootLayout({
             lang="en"
             className={`${inter.variable}`}
         >
-        <body>
-        <Header/>
-        {children}
-        </body>
+        <TanStackProvider>
+            <body>
+            <Suspense fallback={<PageLoader />}>
+                <Header/>
+                {children}
+            </Suspense>
+            </body>
+        </TanStackProvider>
         </html>
     );
 }
