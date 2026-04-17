@@ -1,5 +1,5 @@
 import Link from "next/link";
-import {PathConstant} from "@/lib/constans/path.constant";
+import {PathConstant} from "@/lib/constans/pathConstant";
 import css from "./HeaderNavItem.module.css"
 
 interface HeaderNavItemProps {

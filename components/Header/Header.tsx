@@ -4,7 +4,7 @@ import css from "./Header.module.css"
 import Image from "next/image";
 import Link from "next/link";
 import HeaderNavItem from "@/components/Header/HeaderNavItem/HeaderNavItem";
-import {PathConstant} from "@/lib/constans/path.constant";
+import {PathConstant} from "@/lib/constans/pathConstant";
 import {usePathname} from "next/navigation";
 
 export default function Header() {
@@ -12,8 +12,7 @@ export default function Header() {
 
     return (
         <header className={css.header}>
-            <Link
-                className={css.logo} href={"/"}>
+            <Link className={css.logo} href={PathConstant.Home}>
                 <Image className={css.logoMobile} src="/svg/logo.svg" alt="Logo" width={136} height={16}/>
             </Link>
             <nav className={css.navigation}>

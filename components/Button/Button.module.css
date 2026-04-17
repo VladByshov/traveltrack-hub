@@ -7,7 +7,7 @@
     outline: transparent;
 
     border-radius: 200px;
-    padding: 16px 43.5px;
+    padding: 16px 42.5px;
     width: 173px;
     height: 56px;
 
@@ -30,7 +30,7 @@
 
 .white {
     background: var(--color-bg-main);
-    border: 1px solid var(--gray-light);
+    border: 1px solid var(--border-btn-color);
     transition: border 350ms cubic-bezier(0.4, 0, 0.2, 1);
     color: var(--primary-text-color);
 }
