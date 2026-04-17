@@ -1,16 +1,21 @@
-
 import {getAllCampers} from "@/lib/api/camperApi";
+import {dehydrate, HydrationBoundary, QueryClient} from "@tanstack/react-query";
+import {QueryKeyConstants} from "@/lib/constans/queryKeyConstants";
+import CatalogClient from "@/components/CatalogClient/CatalogClient";
+
 
 export default async function Catalog() {
-    const campersData = await getAllCampers();
-    console.log(campersData);
+
+    const queryClient = new QueryClient();
+
+    // await queryClient.prefetchQuery({
+    //     queryKey: [QueryKeyConstants.Campers],
+    //     queryFn: ()=>getAllCampers(),
+    // });
+
     return (
-        <>
-            {campersData.campers.map((item) => {
-                return <p>
-                    {item.name}
-                </p>
-            })}
-        </>
+        <HydrationBoundary state={dehydrate(queryClient)}>
+            <CatalogClient />
+        </HydrationBoundary>
     );
 }
