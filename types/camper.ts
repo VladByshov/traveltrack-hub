@@ -24,6 +24,8 @@ export interface Camper {
     water: boolean;
     gallery: CarGallery[];
     reviews: CarReview[];
+    totalReviews:number;
+    coverImage:string;
 }
 
 export type CarForm = "alcove" | "panel_van" | "integrated" | "semi_integrated";
