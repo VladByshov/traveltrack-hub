@@ -63,13 +63,13 @@ export default function CampersCard({camper}: CamperCardProps) {
                         {camper.form}
                     </li>
                 </ul>
-                <Link href={`/catalog/${camper.id}`}>
+                <a href={`/catalog/${camper.id}`} target="_blank" rel="noopener noreferrer">
                     <Button
                         className={css.showMoreButton}
                         text={"Show more"}
                         color={"green"}
                     />
-                </Link>
+                </a>
             </div>
         </li>
     );

@@ -42,7 +42,7 @@
 .name {
     font-size: 24px;
     font-weight: 600;
-    color: #101828;
+    color: var(--primary-text-color);
     margin: 0;
     white-space: nowrap;
     overflow: hidden;
@@ -52,14 +52,15 @@
 .priceWrapper {
     font-size: 24px;
     font-weight: 600;
-    color: #101828;
+    color: var(--primary-text-color);
+    margin-right: 73px;
 }
 
 .infoRow {
     display: flex;
     gap: 16px;
     font-size: 16px;
-    color: #101828;
+    color: var(--primary-text-color);
 }
 
 .rating, .location {
@@ -69,19 +70,20 @@
 }
 
 .starIcon {
-    color: #ffc531;
+    color: var(--rating);
 }
 
 .mapIcon {
-    font-size: 18px;
+    font-size: 20px;
 }
 
 
 .description {
-    color: #475467;
+    color: var(--descr-color);
     font-size: 16px;
     line-height: 1.5;
     margin-bottom: 24px;
+    width: 525px;
     display: -webkit-box;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
@@ -95,7 +97,7 @@
     gap: 8px;
     list-style: none;
     padding: 0;
-    margin: 0 0 24px 0;
+    margin-bottom: 24px;
 }
 
 .tag {
@@ -103,15 +105,20 @@
     align-items: center;
     gap: 8px;
     padding: 12px 18px;
-    background-color: #f2f4f7;
+    background-color: var(--badges);
     border-radius: 100px;
     font-size: 16px;
+    line-height: 1.5;
     font-weight: 500;
-    color: #101828;
+    color: var(--primary-text-color);
     text-transform: capitalize;
 }
 
 .tagIcon {
     width: 20px;
     height: 20px;
+}
+
+.showMoreButton{
+    padding: 16px 32px;
 }
