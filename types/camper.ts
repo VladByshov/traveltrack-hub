@@ -5,14 +5,14 @@ export interface Camper {
     rating: number;
     location: string;
     description: string;
-    form: CarForm;
+    form: CamperForm;
     length: string;
     width: string;
     height: string;
     tank: string;
     consumption: string;
-    transmission: CarTransmission;
-    engine: CarEngine;
+    transmission: CamperTransmission;
+    engine: CamperEngine;
     AC: boolean;
     bathroom: boolean;
     kitchen: boolean;
@@ -22,22 +22,22 @@ export interface Camper {
     microwave: boolean;
     gas: boolean;
     water: boolean;
-    gallery: CarGallery[];
-    reviews: CarReview[];
+    gallery: CamperGallery[];
+    reviews: CamperReview[];
     totalReviews:number;
     coverImage:string;
 }
 
-export type CarForm = "alcove" | "panel_van" | "integrated" | "semi_integrated";
-export type CarTransmission = "automatic" | "manual";
-export type CarEngine = "diesel" | "petrol" | "hybrid" | "electric";
+export type CamperForm = "alcove" | "panel_van" | "integrated" | "semi_integrated";
+export type CamperTransmission = "automatic" | "manual";
+export type CamperEngine = "diesel" | "petrol" | "hybrid" | "electric";
 
-export interface CarGallery {
+export interface CamperGallery {
     thumb: string;
     original: string;
 }
 
-export interface CarReview {
+export interface CamperReview {
     reviewer_name: string,
     reviewer_rating: number,
     comment: string,
@@ -51,9 +51,9 @@ export interface CampersResponse {
 
 export interface CamperFilters {
     location: string;
-    form: CarForm;
-    engine: CarEngine;
-    transmission: CarTransmission;
+    form: CamperForm;
+    engine: CamperEngine;
+    transmission: CamperTransmission;
 }
 
 export interface CampersParams extends Partial<CamperFilters>{
