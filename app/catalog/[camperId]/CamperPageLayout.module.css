@@ -1,0 +1,12 @@
+.container {
+  padding: 64px 64px 278px 64px;
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.content {
+  width: 100%;
+}
+
+

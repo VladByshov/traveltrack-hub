@@ -1,0 +1,103 @@
+.pageSection {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.topLayout {
+  display: grid;
+  grid-template-columns: 638px minmax(0, 650px);
+  gap: 24px;
+  align-items: start;
+}
+
+.galleryPane {
+  width: 638px;
+}
+
+.infoPane {
+  width: 650px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.summaryCard {
+  min-height: 304px;
+  border-radius: 16px;
+  padding: 24px;
+  background: var(--background-clr-blocks);
+}
+
+.heading {
+  margin: 0 0 8px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.3333;
+  color: var(--primary-text-color);
+}
+
+.metaRow {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--primary-text-color);
+}
+
+.ratingMeta,
+.locationMeta {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.starIcon {
+  width: 16px;
+  height: 16px;
+  color: var(--rating);
+}
+
+.mapIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.priceRow {
+  margin-bottom: 24px;
+}
+
+.cost {
+  margin: 0;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.3333;
+  color: var(--primary-text-color);
+}
+
+.text {
+  margin: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--descr-color);
+  display: -webkit-box;
+  line-clamp: 5;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.detailsCard {
+  min-height: 360px;
+  border-radius: 16px;
+  padding: 24px;
+  background: var(--background-clr-blocks);
+}
+
+.bottomLayout {
+  width: 100%;
+}
+

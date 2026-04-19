@@ -7,7 +7,7 @@ interface TanStackProviderProps {
 }
 
 export default function TanStackProvider({ children }: TanStackProviderProps) {
-    const [provider] = useState(() => new QueryClient({experemental:{prefetchInRender:true}}));
+    const [provider] = useState(() => new QueryClient());
 
     return (
         <QueryClientProvider client={provider}>{children}</QueryClientProvider>
