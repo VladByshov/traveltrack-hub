@@ -1,5 +1,19 @@
-.container{
-    display: flex;
-    gap: 65px;
-    padding: 48px 64px 148px 64px;
+.catalogWrapper {
+  display: flex;
+  gap: 24px;
+  padding: 48px 64px 52px 64px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.filters {
+  flex: 0 0 360px;
+  border-radius: 20px;
+  padding: 24px;
+  background: #f7f7f7;
+  height: fit-content;
+}
+
+.catalogContent {
+  flex: 1;
 }

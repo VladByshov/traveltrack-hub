@@ -1,0 +1,79 @@
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.groupTitle {
+  margin: 0;
+  padding-bottom: 8px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #6c717b;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.optionLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.hiddenInput {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.customRadio {
+  width: 24px;
+  height: 24px;
+  border: 1px solid #475467;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.2s ease;
+  flex-shrink: 0;
+}
+
+.customRadio::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #829b91;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.2s ease;
+}
+
+.hiddenInput:checked + .customRadio {
+  border-color: #556b62;
+}
+
+.hiddenInput:checked + .customRadio::after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.optionLabel:hover .customRadio {
+  border-color: #344054;
+}
+
+.labelContent {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #101828;
+}

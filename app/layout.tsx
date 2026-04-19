@@ -6,6 +6,7 @@ import "modern-normalize";
 import TanStackProvider from "@/components/TanStackProvider/TanStackProvider";
 import {Suspense} from "react";
 import PageLoader from "@/components/PageLoader/PageLoader";
+import {Toaster} from "react-hot-toast";
 
 const inter = Inter({
     variable: "--font-geist-inter",
@@ -29,6 +30,7 @@ export default function RootLayout({
         >
         <TanStackProvider>
             <body>
+            <Toaster position="top-right" />
             <Suspense fallback={<PageLoader />}>
                 <Header/>
                 {children}

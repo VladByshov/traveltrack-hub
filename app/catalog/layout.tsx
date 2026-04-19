@@ -1,19 +1,27 @@
-import css from "./Catalog.module.css";
-import React from "react";
-import "modern-normalize"
+"use client"
 
+import React from "react";
+import "modern-normalize";
+import css from "./Catalog.module.css";
+import { usePathname } from "next/navigation";
+import SidebarDefault from "./@sidebar/default";
 
 export default function CatalogLayout({
-                                          children,
-                                          sidebar
-                                      }: Readonly<{
+    children,
+}: Readonly<{
     children: React.ReactNode;
-    sidebar: React.ReactNode;
 }>) {
+    const pathname = usePathname();
+    const showSidebar = pathname === "/catalog";
+
     return (
-        <div className={css.container}>
-            <aside className={css.aside}>{sidebar}</aside>
-            <div className={css.mainContent}>{children}</div>
+        <div className={css.catalogWrapper}>
+            {showSidebar && (
+                <aside className={css.filters}>
+                    <SidebarDefault />
+                </aside>
+            )}
+            <div className={css.catalogContent}>{children}</div>
         </div>
     );
 }

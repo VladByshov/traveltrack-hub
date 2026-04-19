@@ -1,3 +1,8 @@
+@import "swiper/css";
+@import 'swiper/css/free-mode';
+@import 'swiper/css/navigation';
+@import 'swiper/css/thumbs';
+
 :root {
   --color-bg-main: #ffffff;
   --primary-text-color: #101828;
@@ -22,8 +27,6 @@
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: "Inter", sans-serif;
-
 }
 
 html {
@@ -43,5 +46,6 @@ a {
 
 .container {
   max-width: 1440px;
+  width: 100%;
   margin: 0 auto;
 }
