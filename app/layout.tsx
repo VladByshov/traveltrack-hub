@@ -9,8 +9,8 @@ import PageLoader from "@/components/PageLoader/PageLoader";
 import {Toaster} from "react-hot-toast";
 
 const inter = Inter({
-    variable: "--font-geist-inter",
     subsets: ["latin"],
+    preload: false,
 });
 
 export const metadata: Metadata = {
@@ -24,12 +24,9 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html
-            lang="en"
-            className={`${inter.variable}`}
-        >
+        <html lang="en">
         <TanStackProvider>
-            <body>
+            <body className={inter.className}>
             <Toaster position="top-right" />
             <Suspense fallback={<PageLoader />}>
                 <Header/>
