@@ -5,13 +5,13 @@ import {FaStar} from "react-icons/fa";
 import {CiMap} from "react-icons/ci";
 import {BsDiagram3, BsFillCarFrontFill, BsFuelPump} from "react-icons/bs";
 import Button from "@/components/Button/Button";
-import Link from "next/link";
 
 interface CamperCardProps {
-    camper: Camper
+    camper: Camper;
+    prioritizeImage?: boolean;
 }
 
-export default function CampersCard({camper}: CamperCardProps) {
+export default function CampersCard({camper, prioritizeImage = false}: CamperCardProps) {
     return (
         <li className={css.cardCamper}>
             <div className={css.imageWrapper}>
@@ -19,7 +19,8 @@ export default function CampersCard({camper}: CamperCardProps) {
                     src={camper.coverImage}
                     alt={camper.name}
                     fill
-                    sizes="100 vw"
+                    sizes="219px"
+                    priority={prioritizeImage}
                     className={css.img}
                 />
             </div>

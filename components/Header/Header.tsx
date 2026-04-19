@@ -13,7 +13,14 @@ export default function Header() {
     return (
         <header className={css.header}>
             <Link className={css.logo} href={PathConstant.Home}>
-                <Image className={css.logoMobile} src="/logo.svg" alt="Logo" width={136} height={16}/>
+                <Image
+                    className={css.logoMobile}
+                    src="/logo.svg"
+                    alt="Logo"
+                    width={136}
+                    height={16}
+                    loading="eager"
+                />
             </Link>
             <nav className={css.navigation}>
                 <ul className={css.listNavigation}>

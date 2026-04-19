@@ -50,10 +50,12 @@ export default function Gallery({ gallery, coverImage, camperName }: GalleryProp
     return <div className={css.emptyGallery}>No images</div>;
   }
 
+  const isMainLoopEnabled = images.length > 1;
+
   return (
     <section className={css.galleryRoot}>
       <Swiper
-        loop
+        loop={isMainLoopEnabled}
         spaceBetween={10}
         navigation
         thumbs={{ swiper: thumbs && !thumbs.destroyed ? thumbs : null }}
@@ -76,7 +78,6 @@ export default function Gallery({ gallery, coverImage, camperName }: GalleryProp
 
       <Swiper
         onSwiper={setThumbs}
-        loop
         spaceBetween={16}
         slidesPerView={Math.min(4, images.length)}
         freeMode

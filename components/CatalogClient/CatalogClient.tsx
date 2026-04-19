@@ -47,14 +47,17 @@ export default function CatalogClient() {
     const hasFilters = Object.values(filters).some(v => v);
 
 
-    console.log(result?.data?.pages?.flatMap((item)=> item.campers))
 
     return (
         <div className={css.container}>
             {campers.length > 0 ? (
                 <ul className={css.camperList}>
-                    {campers.map((camper) => (
-                        <CampersCard camper={camper} key={camper.id}/>
+                    {campers.map((camper, index) => (
+                        <CampersCard
+                            camper={camper}
+                            key={camper.id}
+                            prioritizeImage={index === 0}
+                        />
                     ))}
                 </ul>
             ) : !result.isLoading && hasFilters ? (
