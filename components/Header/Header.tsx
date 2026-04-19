@@ -13,11 +13,11 @@ export default function Header() {
     return (
         <header className={css.header}>
             <Link className={css.logo} href={PathConstant.Home}>
-                <Image className={css.logoMobile} src="/svg/logo.svg" alt="Logo" width={136} height={16}/>
+                <Image className={css.logoMobile} src="/logo.svg" alt="Logo" width={136} height={16}/>
             </Link>
             <nav className={css.navigation}>
                 <ul className={css.listNavigation}>
-                    <HeaderNavItem link={PathConstant.Home} text={"Home"}/>
+                    <HeaderNavItem isActive={pathname === PathConstant.Home} link={PathConstant.Home} text={"Home"}/>
                     <HeaderNavItem isActive={pathname === PathConstant.Catalog} link={PathConstant.Catalog} text={"Catalog"}/>
                 </ul>
             </nav>
